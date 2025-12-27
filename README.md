@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parquet Tools
 
-## Getting Started
+[English](./README.md) | [中文](./README.zh-CN.md)
 
-First, run the development server:
+A browser-based Parquet file toolset powered by DuckDB-WASM for high-performance data processing.
+
+## Features
+
+- **Online Viewer** - View Parquet file contents directly in your browser, no installation required
+- **SQL Query** - Query and analyze Parquet files using SQL syntax
+- **Format Conversion** - Convert between Parquet and CSV/JSON/Excel/SQL formats
+- **Schema Viewer** - Inspect column structure, data types, and metadata of Parquet files
+- **Fully Local** - All processing happens in your browser, files never leave your machine
+
+## Tools
+
+### View & Explore
+
+| Tool           | Description                           |
+| -------------- | ------------------------------------- |
+| Parquet Viewer | View and browse Parquet file contents |
+| SQL Editor     | Query Parquet data using SQL syntax   |
+
+### Export & Convert (Parquet → Other Formats)
+
+| Tool                 | Description                           |
+| -------------------- | ------------------------------------- |
+| Parquet → JSON       | Convert to JSON format                |
+| Parquet → CSV        | Convert to CSV format                 |
+| Parquet → TSV        | Convert to TSV format                 |
+| Parquet → Excel      | Convert to Excel (.xlsx) format       |
+| Parquet → MySQL      | Generate MySQL INSERT statements      |
+| Parquet → PostgreSQL | Generate PostgreSQL INSERT statements |
+
+### Create & Build (Other Formats → Parquet)
+
+| Tool            | Description                    |
+| --------------- | ------------------------------ |
+| CSV → Parquet   | Convert CSV files to Parquet   |
+| JSON → Parquet  | Convert JSON files to Parquet  |
+| Excel → Parquet | Convert Excel files to Parquet |
+
+### Developer Guides
+
+- Python: Read Parquet files code snippets
+- Python: Convert Parquet files code snippets
+- Python: Write Parquet files code snippets
+
+## Tech Stack
+
+- **Framework**: Next.js 16 / React 19
+- **Data Engine**: DuckDB-WASM
+- **Styling**: Tailwind CSS
+- **Table**: TanStack Table
+- **Code Editor**: CodeMirror
+
+## Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
